@@ -1,15 +1,14 @@
 define(function(require, exports, module) {
 
     var SlideData = {
-        picasaUrl: 'https://picasaweb.google.com/data/feed/base/user/flippie39/albumid/5260278037707947825??alt=json&kind=photo&hl=en_US',
-        //picasaUrl: 'https://picasaweb.google.com/data/feed/api/all',
-        queryParams: '?kind=photo&q=puppy&max-results=5&imgmax=720&alt=json',
+        picasaUrl: 'https://picasaweb.google.com/data/feed/api/all',
+        //    //queryParams: '?kind=photo&q=puppy&max-results=5&imgmax=720&alt=json',
+        queryParams: '?alt=json&amp;q=puppy&amp;start-index=1&amp;max-results=5&amp;imgmax=720&amp;kind=photo',
         defaultImage: 'https://lh4.googleusercontent.com/-HbYp2q1BZfQ/U3LXxmWoy7I/AAAAAAAAAJk/VqI5bGooDaA/s1178-no/1.jpg'
     };
 
     SlideData.getUrl = function() {
-        //return SlideData.picasaUrl + SlideData.queryParams;
-        return SlideData.picasaUrl;
+        return SlideData.picasaUrl + SlideData.queryParams;
     };
 
     SlideData.parse = function(data) {
