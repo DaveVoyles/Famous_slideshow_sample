@@ -1,13 +1,15 @@
 define(function(require, exports, module) {
 
-var SlideData = {
-        picasaUrl: 'https://picasaweb.google.com/data/feed/api/all',
+    var SlideData = {
+        picasaUrl: 'https://picasaweb.google.com/data/feed/base/user/flippie39/albumid/5260278037707947825??alt=json&kind=photo&hl=en_US',
+        //picasaUrl: 'https://picasaweb.google.com/data/feed/api/all',
         queryParams: '?kind=photo&q=puppy&max-results=5&imgmax=720&alt=json',
         defaultImage: 'https://lh4.googleusercontent.com/-HbYp2q1BZfQ/U3LXxmWoy7I/AAAAAAAAAJk/VqI5bGooDaA/s1178-no/1.jpg'
     };
 
     SlideData.getUrl = function() {
-        return SlideData.picasaUrl + SlideData.queryParams;
+        //return SlideData.picasaUrl + SlideData.queryParams;
+        return SlideData.picasaUrl;
     };
 
     SlideData.parse = function(data) {
